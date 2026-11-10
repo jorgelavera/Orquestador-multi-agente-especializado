@@ -1,0 +1,27 @@
+[
+  {
+    "id": "eval-fixture-v1",
+    "title": "Small retrieval-evaluation fixture",
+    "text": "A deterministic evaluation fixture for comparing ranked retrieval results at k=5. It contains three queries, their total relevant-document counts, and the number of relevant documents present in the top five. Precision@5 is relevant retrieved divided by five. Recall is relevant retrieved divided by all relevant documents. The per-query attainable precision ceiling is min(total relevant, 5) divided by five.",
+    "retrieval_fixture": {
+      "k": 5,
+      "queries": [
+        {"query_id": "q-1", "relevant_total": 3, "relevant_retrieved": 2},
+        {"query_id": "q-2", "relevant_total": 2, "relevant_retrieved": 1},
+        {"query_id": "q-3", "relevant_total": 4, "relevant_retrieved": 3}
+      ]
+    }
+  },
+  {
+    "id": "metric-definitions-v1",
+    "title": "Ranking metric definitions",
+    "text": "Precision@k is the fraction of the top k retrieved items that are relevant. Recall@k is the fraction of all relevant items retrieved in the top k. Macro averages assign equal weight to each query. A normalized precision score can be defined as macro precision divided by the mean per-query attainable precision ceiling.",
+    "retrieval_fixture": null
+  },
+  {
+    "id": "orchestration-notes-v1",
+    "title": "Orchestration design notes",
+    "text": "A supervisor routes work to focused specialists, checks evidence provenance and result completeness, and terminates after a bounded number of transitions. Specialist output should carry source identifiers so the final response can be validated.",
+    "retrieval_fixture": null
+  }
+]

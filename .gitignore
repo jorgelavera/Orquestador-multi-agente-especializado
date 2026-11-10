@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.ruff_cache/
+.env
+.env.*
+!.env.example
+.ipynb_checkpoints/
+chroma_data/
+*.db
+*.sqlite*
+*.tmp
+*.temp
+tmp/
+temp/
